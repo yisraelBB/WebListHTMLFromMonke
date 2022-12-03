@@ -1,0 +1,71 @@
+* {
+    /* מרחיב את הבורד והפדינג כלפי פנים
+        ולא כלפי חוץ כברירית מחדל */
+    box-sizing: border-box;
+}
+
+body {
+    background: silver;
+    margin: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+    background-image: url(images/desk.jpg);
+    background-size: cover;
+    background-position:top ;
+}
+
+.contairer-fluid {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.container {
+    background: white;
+    max-width: 600px;
+    margin: o auto;
+ 
+    /*  */
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-row-gap: 1em;
+    grid-auto-rows: (100px,auto);
+}
+
+
+header {
+    min-height: 40px;
+}
+
+h1 {   
+    min-height: 50px;     
+    color: skyblue;    
+    grid-column: 1/4;     
+    text-align: center;
+}
+
+h2 {
+    color: darkblue;
+    text-align: center;
+}
+a{
+    color: white;
+}
+
+.box{
+  margin: 16px;
+}
+.box1{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background: #3399ff;
+}
+.box2{
+    background: orange;
+    grid-column:2/3 ;
+    grid-row: 2/3;
+}
+.box3{
+    background: #f4ff68;
+    grid-column:1/2 ;
+    grid-row: 2/3;
+}

@@ -1,0 +1,70 @@
+.container-floid {
+    background: rgb(235, 233, 233);
+    max-width: 1100px;
+    margin: 12px auto;
+    padding: 12px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 12px;
+    background: rgb(235, 233, 233);
+    font-family: sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+    /* קשור לקלס לוגו כדי שהלוגו יהיה רספונסיבי */
+    position: relative;
+}
+
+.box1 {
+    grid-column: 1/6;
+}
+
+.box2 {
+    grid-column: 1/4;
+}
+
+.box3 {
+    grid-row: 2/4;
+    grid-column: 4/6;
+}
+
+.box4 {
+    grid-column: 1/4;
+}
+
+.logo {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+}
+
+
+.bordtop {
+    border-top: 2px solid rgb(235, 233, 233);
+    padding: 4px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    box-shadow: 5px 7px 7px 4px rgba(0, 0, 0, 0.16);
+}
+
+.colortotle {
+    font-size: 3em;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,187 @@
+* {
+    /* מרחיב את הבורד והפדינג כלפי פנים
+    ולא כלפי חוץ כברירית מחדל */
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: sans-serif;
+
+}
+
+/* div {
+    border: 1px solid red;
+} */
+
+.container-fluid {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    min-height: 80px;
+    color: rgb(150, 143, 143);
+    background: rgba(255, 255, 255, 0.697);
+/* להקפי את סרגל אפשרוחות */
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+/* header h2 {
+    margin-right: 100px;
+} */
+
+header .container {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+/*x2 קו תחתון בתטפרית */
+header nav{
+    display: flex;
+}
+
+header nav a {
+    color: rgb(150, 143, 143);
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+header nav a:hover,
+form button:hover {
+    color: gold;
+    transform: scale(1.3,1.3) ;
+    transition: 2000ms;
+}
+/*x2 קו תחתון בתטפרית */
+header nav a::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    display: flex;
+    margin: 0 auto;
+    transition: 2000ms;
+}
+
+header nav a:hover::after
+{
+    background: goldenrod;
+    width: 100%;
+}
+/* ------- */
+.strip {
+    min-height: 300px;
+    background: gray;
+}
+
+.strip .container {
+    /* יורש את הגובה מאבא שלו */
+    min-height: initial;
+
+    max-width: 500px;
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.but {
+    background: rgb(96, 95, 95);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 9px;
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+main {
+    min-height: 300px;
+    background-color: silver;
+    color: white;
+    position: relative;
+}
+
+/* לחצות את הדיב לאמצע */
+main .half_grey {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #ff0;
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .box_top {
+    width: 30%;
+    color: black;
+    background: white;
+    border: 1px solid rgb(25, 15, 15);
+    min-height: 150px;
+    text-align: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 13px -7px #000000, -2px 7px 15px 15px rgba(0, 0, 0, 0.31);
+    /* כדי שהדיב יהיה מעל הדיב האבא */
+    z-index: 99;
+}
+
+main img[alt*="icon"]:hover{
+    transform: scale(1.3,1.3);
+    transition: 2000ms;
+}
+
+
+footer {
+    min-height: 40px;
+    background-color: gray;
+    color: white;
+}
+
+/* ריספונסיבי /מדיה קווארי  */
+@media screen and (max-width: 728px) {
+
+    header .logo {
+        width: 100%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .strip {
+        background: orange;
+    }
+
+    main .container {
+        /* יפיל את הילדים שורה למטה ברגע שעוברים את 100% של השטח */
+        flex-wrap: wrap;
+    }
+
+    main .box_top {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
